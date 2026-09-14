@@ -104,6 +104,9 @@
 .hero-stat {
     display: flex;
     flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     gap: 0.25rem;
     padding: 1.1rem 1.25rem;
     border: 1px solid var(--border);
@@ -118,7 +121,7 @@
 }
 
 .hero-stat dd {
-    margin: 0;
+    margin: auto 0;
     font-size: var(--step-2);
     font-weight: 650;
     letter-spacing: -0.02em;

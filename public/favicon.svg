@@ -1,7 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#0b0f1a"/>
-  <g transform="translate(-8 0)">
-    <path d="M18 44V20h11c5 0 8 2.4 8 6.4 0 2.7-1.4 4.6-3.8 5.4 3 .7 4.8 2.9 4.8 6 0 4.3-3.2 6.2-8.6 6.2H18Zm5.6-14.2h4.8c2.2 0 3.5-1 3.5-2.8s-1.3-2.8-3.5-2.8h-4.8v5.6Zm0 10h5.3c2.4 0 3.8-1 3.8-3s-1.4-3-3.8-3h-5.3v6Z" fill="#7aa2ff"/>
-    <path d="M42 44V20h11.4c5.4 0 8.6 2.9 8.6 7.3 0 3.3-1.8 5.8-5 6.8L61.5 44h-6.5l-4.1-9.4h-3.3V44H42Zm5.6-13.8h5c2.8 0 4.4-1.1 4.4-2.9s-1.6-2.9-4.4-2.9h-5v5.8Z" fill="#4ad9c4"/>
+  <style>
+    .g1 { stop-color: #7aa2ff }
+    .g2 { stop-color: #4ad9c4 }
+    .ink { fill: #08101f }
+    @media (prefers-color-scheme: light) {
+    .g1 { stop-color: #3159d6 }
+    .g2 { stop-color: #0e9384 }
+    .ink { fill: #ffffff }
+    }
+  </style>
+  <defs>
+    <linearGradient id="chip" gradientUnits="userSpaceOnUse" x1="6.4" y1="-4.5" x2="57.6" y2="68.5">
+      <stop offset="0" class="g1"/>
+      <stop offset="1" class="g2"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="20" fill="url(#chip)"/>
+  <g class="ink" transform="translate(-8 0)">
+    <path d="M18 44V20h11c5 0 8 2.4 8 6.4 0 2.7-1.4 4.6-3.8 5.4 3 .7 4.8 2.9 4.8 6 0 4.3-3.2 6.2-8.6 6.2H18Zm5.6-14.2h4.8c2.2 0 3.5-1 3.5-2.8s-1.3-2.8-3.5-2.8h-4.8v5.6Zm0 10h5.3c2.4 0 3.8-1 3.8-3s-1.4-3-3.8-3h-5.3v6Z"/>
+    <path d="M42 44V20h11.4c5.4 0 8.6 2.9 8.6 7.3 0 3.3-1.8 5.8-5 6.8L61.5 44h-6.5l-4.1-9.4h-3.3V44H42Zm5.6-13.8h5c2.8 0 4.4-1.1 4.4-2.9s-1.6-2.9-4.4-2.9h-5v5.8Z"/>
   </g>
 </svg>
