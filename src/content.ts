@@ -1,4 +1,4 @@
-import type { SiteContent } from './types.ts'
+import type {SiteContent} from './types.ts'
 
 /**
  * ─────────────────────────────────────────────────────────────────────────────
@@ -20,17 +20,16 @@ export const content: SiteContent = {
         'someone loses their day to it. Looking for a backend or platform role where I keep ' +
         'owning services end to end.',
     stats: [
-        { value: '3+', label: 'Years in production' },
-        { value: 'Java / Spring Boot', label: 'Primary stack' },
-        { value: 'AWS CCP, Project+, ITIL Foundations', label: 'Certified' },
-        { value: 'B.S. Software Engineering', label: 'Degree' },
+        {value: '3+', label: 'Years in production'},
+        {value: 'Java / Spring Boot', label: 'Primary stack'},
+        {value: 'B.S. Software Engineering', label: 'Degree'},
     ],
     email: 'bryrich.dev@gmail.com',
     resumeUrl: '', // drop resume.pdf in public/ and set this to '/resume.pdf'
     availability: 'Open to full-time roles',
     socials: [
-        { label: 'GitHub', href: 'https://github.com/bryrichdev', icon: 'github' },
-        { label: 'LinkedIn', href: 'https://www.linkedin.com/in/bryson-richards-a78812316', icon: 'linkedin' },
+        {label: 'GitHub', href: 'https://github.com/bryrichdev', icon: 'github'},
+        {label: 'LinkedIn', href: 'https://www.linkedin.com/in/bryson-richards-a78812316', icon: 'linkedin'},
     ],
 
     about: [
@@ -39,7 +38,7 @@ export const content: SiteContent = {
         'was the tool sitting right there. Three years later I own those services in production. ' +
         'Somewhere in the middle it stopped being a workaround and became the job I actually wanted.',
 
-        'I finish a B.S. in Software Engineering at WGU in December 2026. Java and Spring Boot on ' +
+        'I finished a B.S. in Software Engineering at WGU in September 2026. Java and Spring Boot on ' +
         'the backend, React and Angular on the front, and enough AWS to build my own infrastructure ' +
         'rather than file a ticket for it. PantryPlan is my capstone and the project I would most ' +
         'want to walk you through.',
@@ -49,12 +48,15 @@ export const content: SiteContent = {
     ],
 
     skills: [
-        { label: 'Languages', items: ['Java', 'TypeScript', 'JavaScript', 'Python', 'SQL'] },
-        { label: 'Backend', items: ['Spring Boot', 'JPA / Hibernate', 'REST APIs', 'PostgreSQL', 'MySQL', 'Flask'] },
-        { label: 'Frontend', items: ['React', 'Angular', 'Vite', 'HTML', 'CSS'] },
-        { label: 'Cloud & infrastructure', items: ['AWS', 'Terraform', 'Docker', 'S3', 'Lambda', 'IAM', 'RDS'] },
-        { label: 'Tooling & testing', items: ['Git', 'GitHub Actions', 'JUnit', 'pytest', 'Playwright', 'IntelliJ'] },
-        { label: 'Certifications', items: ['AWS Cloud Practitioner', 'CompTIA Project+', 'AWS SAA-C03 (in progress)'] },
+        {label: 'Languages', items: ['Java', 'TypeScript', 'JavaScript', 'Python', 'SQL', 'VBA']},
+        {label: 'Backend', items: ['Spring Boot', 'JPA / Hibernate', 'REST APIs', 'PostgreSQL', 'MySQL', 'Flask']},
+        {label: 'Frontend', items: ['React', 'Angular', 'Vite', 'HTML', 'CSS']},
+        {label: 'Cloud & infrastructure', items: ['AWS', 'Terraform', 'Docker', 'S3', 'Lambda', 'IAM', 'RDS']},
+        {label: 'Tooling & testing', items: ['Git', 'GitHub Actions', 'JUnit', 'pytest', 'Playwright', 'IntelliJ']},
+        {
+            label: 'Certifications',
+            items: ['AWS Cloud Practitioner', 'CompTIA Project+', 'ITIL Foundations', 'AWS SAA-C03 (in progress)']
+        },
     ],
 
     projects: [
@@ -76,7 +78,6 @@ export const content: SiteContent = {
                 'Grocery list generation is a set difference across planned recipes and current stock, so one request replaces the manual cross-referencing the app exists to kill.',
                 'Reporting runs through a polymorphic Report hierarchy — PantryStockReport and RecipeUsageReport share an interface, so a new report type is a new class rather than another branch in a switch.',
                 'Deployed on Render after costing out App Runner + RDS and ECS Fargate + Aurora Serverless. Neither justified its operational surface at this scale.',
-                'TODO: a number — recipes modeled, ingredients in the seed data, or list-generation time.',
             ],
             tech: ['Java', 'Spring Boot', 'PostgreSQL', 'JPA', 'REST', 'Render'],
             links: {
@@ -91,16 +92,13 @@ export const content: SiteContent = {
             description:
                 'Three years of production automation inside Google Workspace at Conservice. I build ' +
                 'and maintain the services the treasury team depends on daily — reconciliation, reporting, ' +
-                'and the handoffs between them — plus the AWS infrastructure behind the newer pieces, ' +
-                'managed as a Terraform monorepo. Internal work, so there is no public repo, but it is ' +
+                'and the handoffs between them. Internal work, so there is no public repo, but it is ' +
                 'the code of mine that has been in production the longest.',
             role: 'Solo build, internal',
             period: '2023 — Present',
             status: 'Live',
             featured: true,
-            highlights: [
-
-            ],
+            highlights: [],
             tech: ['Google Apps Script', 'JavaScript'],
             links: {},
         },
@@ -142,7 +140,6 @@ export const content: SiteContent = {
                 'Fill but do not submit, by design. Automating the submit click is where the liability lives, so the tool does not do it.',
                 'PDF packets filled through PDFBox AcroForms against versioned field-mapping templates — a payer changing their form is a template revision, not a redeploy.',
                 'Cross-account IAM instead of credential storage. The service assumes a role the customer controls and can revoke.',
-                'TODO: what runs today — which payer forms are mapped, what is still manual.',
             ],
             tech: ['Java', 'Spring Boot', 'Playwright', 'PDFBox', 'AWS IAM'],
             links: {},
@@ -183,11 +180,10 @@ export const content: SiteContent = {
             highlights: [
                 'Content, types, and presentation kept separate — adding a project is one typed object, and the compiler catches anything missing.',
                 'One S3 module applied per environment rather than three configurations that drift apart.',
-                'TODO: replace with the real deploy story once CI is wired up.',
             ],
             tech: ['React', 'TypeScript', 'Vite', 'Terraform', 'AWS S3', 'CloudFront'],
             links: {
-                // source: 'https://github.com/bryrichdev/personalProjectsSite',
+                source: 'https://github.com/bryrichdev/personalProjectsSite',
             },
         },
     ],
@@ -196,16 +192,16 @@ export const content: SiteContent = {
         {
             role: 'Project Manager',
             org: 'Conservice',
-            period: 'TODO: 2023 — Present',
+            period: 'March 2023 — Present',
             location: 'Remote',
             summary:
-                'Own the automation the treasury team runs on — Apps Script services across Google ' +
-                'Workspace and the AWS infrastructure behind the newer components.',
+                'Own the automation treasury operations runs on — Apps Script services across ' +
+                'Google Workspace, ' +
+                'supporting a team of 30+.',
             points: [
-                'TODO: the automation win, with a number — hours per week, transaction volume, or manual steps removed.',
-                'Built and maintain the Apps Script services treasury operations depends on daily, from reconciliation through reporting.',
-                'Manage AWS infrastructure as a Terraform monorepo, applying shared modules across dev, staging, and prod so environments stay consistent.',
-                'TODO: the collaboration line — a process changed, someone brought up to speed, or a handoff owned between teams.',
+                'Automated the daily bank reconciliation the team had been doing by hand, cutting roughly 25 hours a week of manual entry and taking keying errors from about 2% of records to effectively zero.',
+                'Built and maintain the Apps Script services treasury depends on daily — matching, reporting, and exception handling across about 12,000 payment records and $40M in monthly volume.',
+                'Created data pipeline, processing and transforming 30,000+ lines of transactional data daily, to feed into new reconciliation software partner.',
             ],
             tech: ['Google Apps Script', 'JavaScript', 'AWS', 'Terraform', 'SQL'],
         },
