@@ -200,10 +200,10 @@ export const content: SiteContent = {
                 'supporting a team of 30+.',
             points: [
                 'Automated the daily bank reconciliation the team had been doing by hand, cutting roughly 25 hours a week of manual entry and taking keying errors from about 2% of records to effectively zero.',
-                'Built and maintain the Apps Script services treasury depends on daily — matching, reporting, and exception handling across about 12,000 payment records and $40M in monthly volume.',
-                'Created data pipeline, processing and transforming 30,000+ lines of transactional data daily, to feed into new reconciliation software partner.',
+                'Built and maintain the Apps Script services treasury depends on daily — matching, reporting, and exception handling across about 120,000 payment records and $80M in monthly volume.',
+                'Created data pipeline, processing and transforming 30,000+ lines of transactional data daily, to feed into new reconciliation software.',
             ],
-            tech: ['Google Apps Script', 'JavaScript', 'AWS', 'Terraform', 'SQL'],
+            tech: ['Google Apps Script', 'JavaScript', 'SQL', 'VBA', 'Power BI'],
         },
     ],
 }
