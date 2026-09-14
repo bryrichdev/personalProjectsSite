@@ -1,0 +1,40 @@
+.contact {
+    padding-block: clamp(3.5rem, 8vw, 6rem);
+    border-top: 1px solid var(--border);
+}
+
+.contact-card {
+    display: grid;
+    justify-items: center;
+    padding: clamp(2.25rem, 6vw, 4rem) 1.5rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    background:
+            radial-gradient(28rem 16rem at 50% 0%, var(--accent-soft), transparent 70%),
+            var(--surface);
+    text-align: center;
+}
+
+.contact-title {
+    margin-top: 0.75rem;
+    font-size: var(--step-3);
+}
+
+.contact-lead {
+    max-width: 34rem;
+    margin-top: 0.85rem;
+    color: var(--text-muted);
+    font-size: var(--step-1);
+}
+
+.contact-email {
+    margin-top: 1.75rem;
+    font-family: var(--font-mono);
+    font-size: 0.9375rem;
+}
+
+.contact-socials {
+    display: flex;
+    gap: 0.6rem;
+    margin-top: 1.5rem;
+}

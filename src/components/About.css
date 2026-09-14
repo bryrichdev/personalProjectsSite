@@ -1,0 +1,65 @@
+.about-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.9fr) minmax(0, 1fr);
+    gap: clamp(1.5rem, 4vw, 3rem);
+    align-items: start;
+}
+
+.about-copy {
+    display: grid;
+    gap: 1.1rem;
+    max-width: 42rem;
+    color: var(--text-muted);
+    font-size: var(--step-1);
+}
+
+.about-card {
+    display: grid;
+    justify-items: center;
+    gap: 0.15rem;
+    padding: 2rem 1.5rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    background: var(--surface);
+    text-align: center;
+}
+
+.about-avatar {
+    display: grid;
+    place-items: center;
+    width: 5rem;
+    height: 5rem;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    background: linear-gradient(145deg, var(--accent), var(--accent-2));
+    color: var(--accent-contrast);
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.about-name {
+    font-size: var(--step-1);
+    font-weight: 650;
+}
+
+.about-role {
+    color: var(--accent);
+    font-size: 0.9375rem;
+}
+
+.about-location {
+    color: var(--text-faint);
+    font-size: 0.875rem;
+}
+
+@media (max-width: 48rem) {
+    .about-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .about-card {
+        justify-items: start;
+        text-align: left;
+    }
+}

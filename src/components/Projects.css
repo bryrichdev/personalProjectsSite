@@ -1,0 +1,209 @@
+.project-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.75rem;
+}
+
+.filter-chip {
+    padding: 0.35rem 0.85rem;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: color 0.16s var(--ease), border-color 0.16s var(--ease),
+    background-color 0.16s var(--ease);
+}
+
+.filter-chip:hover {
+    color: var(--text);
+    border-color: var(--border-strong);
+}
+
+.filter-chip.is-active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--accent-contrast);
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(21rem, 100%), 1fr));
+    gap: 1.25rem;
+}
+
+/* ─── Card ───────────────────────────────────────────────────────────────── */
+
+.project-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    padding: 1.6rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    background: var(--surface);
+    overflow: hidden;
+    transition: border-color 0.2s var(--ease), translate 0.2s var(--ease),
+    box-shadow 0.2s var(--ease);
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    inset: 0 0 auto;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    opacity: 0;
+    transition: opacity 0.2s var(--ease);
+}
+
+.project-card:hover {
+    border-color: var(--border-strong);
+    translate: 0 -3px;
+    box-shadow: var(--shadow);
+}
+
+.project-card:hover::before {
+    opacity: 1;
+}
+
+.project-card.is-featured {
+    background: linear-gradient(
+            160deg,
+            color-mix(in srgb, var(--accent) 7%, var(--surface)),
+            var(--surface) 55%
+    );
+}
+
+/* Featured cards span the full row on wide screens. */
+@media (min-width: 60rem) {
+    .project-card.is-featured {
+        grid-column: span 2;
+    }
+}
+
+.project-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.project-name {
+    font-size: var(--step-2);
+}
+
+.project-tagline {
+    margin-top: 0.3rem;
+    color: var(--accent);
+    font-size: 0.9375rem;
+    font-weight: 500;
+}
+
+.project-status {
+    flex-shrink: 0;
+    padding: 0.2rem 0.65rem;
+    border-radius: 999px;
+    border: 1px solid var(--border-strong);
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.project-status.status-live {
+    border-color: color-mix(in srgb, var(--accent-2) 55%, transparent);
+    background: color-mix(in srgb, var(--accent-2) 12%, transparent);
+    color: var(--accent-2);
+}
+
+.project-status.status-in-progress {
+    border-color: color-mix(in srgb, var(--accent) 50%, transparent);
+    background: var(--accent-soft);
+    color: var(--accent);
+}
+
+.project-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: -0.4rem;
+    color: var(--text-faint);
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+}
+
+.project-description {
+    color: var(--text-muted);
+}
+
+.project-highlights {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.project-highlights li {
+    position: relative;
+    padding-left: 1.4rem;
+    color: var(--text);
+    font-size: 0.9375rem;
+    line-height: 1.55;
+}
+
+.project-highlights li::before {
+    content: '';
+    position: absolute;
+    left: 0.3rem;
+    top: 0.62em;
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 50%;
+    background: var(--accent);
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: auto;
+    padding-top: 0.5rem;
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--text);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    transition: color 0.18s var(--ease);
+}
+
+.project-link:hover {
+    color: var(--accent);
+}
+
+.link-arrow {
+    opacity: 0.55;
+    transition: translate 0.18s var(--ease), opacity 0.18s var(--ease);
+}
+
+.project-link:hover .link-arrow {
+    opacity: 1;
+    translate: 1px -1px;
+}
+
+.project-count {
+    margin-top: 1.5rem;
+    color: var(--text-faint);
+    font-size: 0.875rem;
+}

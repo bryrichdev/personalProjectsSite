@@ -1,0 +1,32 @@
+.site-footer {
+    border-top: 1px solid var(--border);
+    padding-block: 2rem;
+    color: var(--text-faint);
+    font-size: 0.875rem;
+}
+
+.footer-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem 1.5rem;
+}
+
+.footer-built {
+    margin-right: auto;
+}
+
+.footer-top {
+    transition: color 0.18s var(--ease);
+}
+
+.footer-top:hover {
+    color: var(--accent);
+}
+
+@media (max-width: 36rem) {
+    .footer-built {
+        margin-right: 0;
+        width: 100%;
+    }
+}

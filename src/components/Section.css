@@ -1,0 +1,27 @@
+.section {
+    padding-block: clamp(3.5rem, 8vw, 6.5rem);
+    border-top: 1px solid var(--border);
+}
+
+.section-head {
+    max-width: 44rem;
+    margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.eyebrow-rule {
+    width: 1.75rem;
+    height: 1px;
+    background: currentColor;
+    opacity: 0.6;
+}
+
+.section-title {
+    margin-top: 0.75rem;
+    font-size: var(--step-3);
+}
+
+.section-lead {
+    margin-top: 0.9rem;
+    color: var(--text-muted);
+    font-size: var(--step-1);
+}

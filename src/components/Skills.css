@@ -1,0 +1,33 @@
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr));
+    gap: 1.25rem;
+}
+
+.skill-group {
+    padding: 1.35rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+}
+
+.skill-label {
+    margin-bottom: 0.9rem;
+    color: var(--text-faint);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.skill-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+}
+
+.skill-items .tag {
+    font-size: 0.8125rem;
+    color: var(--text);
+}

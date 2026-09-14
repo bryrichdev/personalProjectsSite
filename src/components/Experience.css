@@ -1,0 +1,83 @@
+.timeline {
+    display: grid;
+    gap: 2.25rem;
+    position: relative;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 2rem;
+}
+
+/* Connector line between entries. */
+.timeline-item:not(:last-child)::before {
+    content: '';
+    position: absolute;
+    left: 0.3rem;
+    top: 1.35rem;
+    bottom: -2.25rem;
+    width: 1px;
+    background: var(--border);
+}
+
+.timeline-marker {
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 4px var(--accent-soft);
+}
+
+.timeline-period {
+    color: var(--text-faint);
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+}
+
+.timeline-role {
+    margin-top: 0.3rem;
+    font-size: var(--step-1);
+}
+
+.timeline-org {
+    color: var(--accent);
+    font-weight: 500;
+}
+
+.timeline-summary {
+    margin-top: 0.5rem;
+    color: var(--text-muted);
+}
+
+.timeline-points {
+    display: grid;
+    gap: 0.45rem;
+    margin-top: 0.9rem;
+}
+
+.timeline-points li {
+    position: relative;
+    padding-left: 1.25rem;
+    font-size: 0.9375rem;
+    color: var(--text-muted);
+}
+
+.timeline-points li::before {
+    content: '';
+    position: absolute;
+    left: 0.15rem;
+    top: 0.65em;
+    width: 0.375rem;
+    height: 1px;
+    background: var(--border-strong);
+}
+
+.timeline-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 1rem;
+}
