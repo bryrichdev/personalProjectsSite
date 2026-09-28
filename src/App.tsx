@@ -21,9 +21,9 @@ function App() {
     const nav = useMemo<NavItem[]>(
         () =>
             [
+                hasExperience ? { id: 'experience', label: 'Experience' } : null,
                 { id: 'projects', label: 'Projects' },
                 hasSkills ? { id: 'skills', label: 'Skills' } : null,
-                hasExperience ? { id: 'experience', label: 'Experience' } : null,
                 { id: 'about', label: 'About' },
                 { id: 'contact', label: 'Contact' },
             ].filter((item): item is NavItem => item !== null),
@@ -48,9 +48,9 @@ function App() {
 
             <main id="main">
                 <Hero content={content} />
+                {hasExperience && <Experience entries={content.experience} />}
                 <Projects projects={content.projects} />
                 {hasSkills && <Skills groups={content.skills} />}
-                {hasExperience && <Experience entries={content.experience} />}
                 <About
                     paragraphs={content.about}
                     name={content.name}
