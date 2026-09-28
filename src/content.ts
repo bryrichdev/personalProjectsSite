@@ -63,7 +63,7 @@ export const content: SiteContent = {
         {
             role: 'Project Manager',
             org: 'Conservice',
-            period: 'March 2023 — Present',
+            period: 'June 2024 — Present',
             location: 'Remote',
             summary:
                 'Own the automation treasury operations runs on — Apps Script services across ' +
@@ -75,6 +75,19 @@ export const content: SiteContent = {
                 'Created data pipeline, processing and transforming 30,000+ lines of transactional data daily, to feed into new reconciliation software.',
             ],
             tech: ['Google Apps Script', 'JavaScript', 'SQL', 'VBA', 'Power BI'],
+        },
+        {
+            role: 'Payment Resolutions Team Lead',
+            org: 'Conservice',
+            period: 'December 2022 - June 2024',
+            location: 'Logan, UT',
+            summary: 'Lead the payment resolutions team and processes to ensure utility disconnections were resolved and future disconnections were reduced.',
+            points: ['Led team in preventing client utility disconnections by resolving complex payment and billing errors under tight service deadlines.',
+                "Reduced the team's open ticket queue from ~4000 to under 200 by redesigning intake processes and introducing support tooling through Google Apps Script.",
+                'Set and enforced SOE, trained team members, and ran quality reviews to hold accuracy and throughput targets.',
+                'Created SOE automation for tracking tickets closed, ticket lifespan, and quality of work across multiple teams outside of my own.',
+            ],
+            tech: ['Google Apps Script', 'JavaScript']
         },
     ],
 
