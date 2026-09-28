@@ -42,7 +42,7 @@ export function Projects({ projects }: ProjectsProps) {
             id="projects"
             eyebrow="Work"
             title="Projects"
-            lead="Things I designed, built, and shipped. Each one links to a live demo or the source, so you can judge the code rather than take my word for it."
+            lead="What I've designed and built, from internal production tools to my own projects."
         >
             {filters.length > 2 && (
                 <div className="project-filters" role="group" aria-label="Filter projects by technology">

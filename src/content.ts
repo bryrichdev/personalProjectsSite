@@ -14,11 +14,10 @@ export const content: SiteContent = {
     role: 'Software Engineer',
     location: 'Eden, North Carolina',
     intro:
-        'I build backend services and the infrastructure they run on — Java and Spring Boot ' +
-        'over Postgres, deployed with Terraform on AWS. Three years of that has been production ' +
-        'automation for a treasury team, where the code either runs correctly every morning or ' +
-        'someone loses their day to it. Looking for a backend or platform role where I keep ' +
-        'owning services end to end.',
+        "I build backend services and the infrastructure they run on. For three years I've " +
+        'written the production automation a treasury team depends on every day. My own projects ' +
+        'run on Java and Spring Boot over Postgres, and I manage AWS infrastructure with Terraform. ' +
+        'I want a backend or platform role where I own services end to end.',
     stats: [
         {value: '3+', label: 'Years in production'},
         {value: 'Java / Spring Boot', label: 'Primary stack'},
@@ -33,18 +32,18 @@ export const content: SiteContent = {
     ],
 
     about: [
-        'I started writing code to get out of manual work. I was managing treasury operations ' +
-        'at Conservice, the team was losing hours a week to spreadsheet handoffs, and Apps Script ' +
-        'was the tool sitting right there. Three years later I own those services in production. ' +
-        'Somewhere in the middle it stopped being a workaround and became the job I actually wanted.',
+        'I started writing code to get rid of manual work. I was managing treasury operations at ' +
+        'Conservice, and the team lost hours every week to spreadsheet handoffs. Apps Script was ' +
+        'already there, so I used it. Three years later, I own those services in production. ' +
+        'Along the way, the workaround turned into the job I wanted.',
 
-        'I finished a B.S. in Software Engineering at WGU in September 2026. Java and Spring Boot on ' +
-        'the backend, React and Angular on the front, and enough AWS to build my own infrastructure ' +
-        'rather than file a ticket for it. PantryPlan is my capstone and the project I would most ' +
-        'want to walk you through.',
+        'I finished my B.S. in Software Engineering at WGU in September 2026. I work in Java and ' +
+        'Spring Boot on the backend and React and Angular on the front end. I know enough AWS to ' +
+        "build my own infrastructure instead of filing a ticket for it. My capstone, PantryPlan, " +
+        "is the project I'd most like to walk you through.",
 
-        'I am looking for a backend or infrastructure role on a team that ships. If that sounds ' +
-        'like yours, email me.',
+        "I'm looking for a backend or infrastructure role on a team that ships. If that's your " +
+        'team, send me an email.',
     ],
 
     skills: [
@@ -55,7 +54,7 @@ export const content: SiteContent = {
         {label: 'Tooling & testing', items: ['Git', 'GitHub Actions', 'JUnit', 'pytest', 'Playwright', 'IntelliJ']},
         {
             label: 'Certifications',
-            items: ['AWS Cloud Practitioner', 'CompTIA Project+', 'ITIL Foundations', 'AWS SAA-C03 (in progress)']
+            items: ['AWS Cloud Practitioner', 'CompTIA Project+', 'ITIL Foundation', 'AWS SAA-C03 (in progress)']
         },
     ],
 
@@ -63,29 +62,29 @@ export const content: SiteContent = {
         {
             role: 'Project Manager',
             org: 'Conservice',
-            period: 'June 2024 — Present',
+            period: 'June 2024 – Present',
             location: 'Remote',
             summary:
-                'Own the automation treasury operations runs on — Apps Script services across ' +
-                'Google Workspace, ' +
+                'Own the Google Workspace automation that treasury operations runs on, ' +
                 'supporting a team of 30+.',
             points: [
-                'Automated the daily bank reconciliation the team had been doing by hand, cutting roughly 25 hours a week of manual entry and taking keying errors from about 2% of records to effectively zero.',
-                'Built and maintain the Apps Script services treasury depends on daily — matching, reporting, and exception handling across about 120,000 payment records and $80M in monthly volume.',
-                'Created data pipeline, processing and transforming 30,000+ lines of transactional data daily, to feed into new reconciliation software.',
+                'Automated the daily bank reconciliation the team did by hand. Cut about 25 hours a week of manual entry and brought keying errors from about 2% of records to near zero.',
+                'Build and maintain the Apps Script services treasury uses every day for matching, reporting, and exception handling across about 120,000 payment records and $80M in monthly volume.',
+                'Built a data pipeline that processes and transforms 30,000+ lines of transaction data a day to feed the new reconciliation software.',
             ],
             tech: ['Google Apps Script', 'JavaScript', 'SQL', 'VBA', 'Power BI'],
         },
         {
             role: 'Payment Resolutions Team Lead',
             org: 'Conservice',
-            period: 'December 2022 - June 2024',
+            period: 'December 2022 – June 2024',
             location: 'Logan, UT',
-            summary: 'Lead the payment resolutions team and processes to ensure utility disconnections were resolved and future disconnections were reduced.',
-            points: ['Led team in preventing client utility disconnections by resolving complex payment and billing errors under tight service deadlines.',
-                "Reduced the team's open ticket queue from ~4000 to under 200 by redesigning intake processes and introducing support tooling through Google Apps Script.",
-                'Set and enforced SOE, trained team members, and ran quality reviews to hold accuracy and throughput targets.',
-                'Created SOE automation for tracking tickets closed, ticket lifespan, and quality of work across multiple teams outside of my own.',
+            summary: 'Led the team responsible for stopping client utility disconnections and preventing new ones.',
+            points: [
+                'Resolved complex payment and billing errors under tight service deadlines to keep client utilities connected.',
+                'Cut the open ticket queue from about 4,000 to under 200 by redesigning intake and adding Apps Script support tooling.',
+                'Set and enforced SOE, trained the team, and ran quality reviews to hold accuracy and throughput targets.',
+                'Built SOE automation that tracked tickets closed, ticket lifespan, and work quality across several teams beyond my own.',
             ],
             tech: ['Google Apps Script', 'JavaScript']
         },
@@ -95,21 +94,20 @@ export const content: SiteContent = {
         {
             slug: 'pantryplan',
             name: 'PantryPlan',
-            tagline: 'Turns your recipes and what is already in your pantry into a grocery list.',
+            tagline: 'Turns your recipes and pantry stock into a grocery list.',
             description:
-                'A full-stack meal planner on Spring Boot and PostgreSQL. You add recipes and track ' +
-                'pantry stock; PantryPlan subtracts what you already have from what the week of cooking ' +
-                'requires and hands back the list of what you actually need to buy. It is my WGU software ' +
-                'engineering capstone and the first project where I owned the schema, the service layer, ' +
-                'and the deploy end to end.',
+                'A full-stack meal planner built on Spring Boot and PostgreSQL. You add recipes and ' +
+                "track what's in your pantry. PantryPlan subtracts what you have from what the week's " +
+                "meals need and returns what you still have to buy. It's my WGU capstone and the first " +
+                'project where I owned the schema, the service layer, and the deployment.',
             role: 'Solo build',
             period: '2026',
             status: 'In progress',
             featured: true,
             highlights: [
-                'Grocery list generation is a set difference across planned recipes and current stock, so one request replaces the manual cross-referencing the app exists to kill.',
-                'Reporting runs through a polymorphic Report hierarchy — PantryStockReport and RecipeUsageReport share an interface, so a new report type is a new class rather than another branch in a switch.',
-                'Deployed on Render after costing out App Runner + RDS and ECS Fargate + Aurora Serverless. Neither justified its operational surface at this scale.',
+                'One request builds the grocery list. It takes the set difference between planned recipes and current stock, replacing the manual cross-checking the app was built to remove.',
+                'Reports share one interface. PantryStockReport and RecipeUsageReport both implement it, so a new report type is a new class instead of another branch in a switch.',
+                'Deployed on Render. I priced App Runner with RDS and ECS Fargate with Aurora Serverless first. Neither was worth the operational overhead at this scale.',
             ],
             tech: ['Java', 'Spring Boot', 'PostgreSQL', 'JPA', 'REST', 'Render'],
             links: {
@@ -120,14 +118,14 @@ export const content: SiteContent = {
         {
             slug: 'treasury-automation',
             name: 'Treasury Automation Suite',
-            tagline: 'The Apps Script services a national utility billing team runs every morning.',
+            tagline: 'The Apps Script services a national utility billing company\u2019s treasury team runs every morning.',
             description:
-                'Three years of production automation inside Google Workspace at Conservice. I build ' +
-                'and maintain the services the treasury team depends on daily — reconciliation, reporting, ' +
-                'and the handoffs between them. Internal work, so there is no public repo, but it is ' +
-                'the code of mine that has been in production the longest.',
+                'Three years of production automation in Google Workspace at Conservice. I build and ' +
+                'maintain the services the treasury team uses every day for reconciliation, reporting, ' +
+                "and the handoffs between them. It's internal, so there's no public repo. It's also the " +
+                'code of mine that has run in production the longest.',
             role: 'Solo build, internal',
-            period: '2023 — Present',
+            period: '2023 – Present',
             status: 'Live',
             featured: true,
             highlights: [],
@@ -158,24 +156,25 @@ export const content: SiteContent = {
         {
             slug: 'credentialing-automation',
             name: 'Credentialing Automation',
-            tagline: 'Fills medical credentialing applications without ever holding the credentials.',
+            tagline: 'Fills out medical credentialing applications without storing anyone\u2019s credentials.',
             description:
                 'Credentialing coordinators retype the same provider data into dozens of payer portals. ' +
-                'This is a Spring Boot service that drives Playwright to fill those forms and then stops — ' +
-                'a human reviews and submits every one. Provider data stays in the customer\u2019s own AWS ' +
-                'account, reached through a cross-account role, so the service never stores anyone\u2019s ' +
-                'credentials.',
+                'This Spring Boot service drives Playwright to fill those forms, then stops. A person ' +
+                'reviews and submits every one. Provider data stays in the customer\u2019s own AWS account ' +
+                'and is reached through a cross-account role, so the service never stores credentials.',
             role: 'Solo build',
             period: '2026',
             status: 'Prototype',
             featured: true,
             highlights: [
-                'Fill but do not submit, by design. Automating the submit click is where the liability lives, so the tool does not do it.',
-                'PDF packets filled through PDFBox AcroForms against versioned field-mapping templates — a payer changing their form is a template revision, not a redeploy.',
-                'Cross-account IAM instead of credential storage. The service assumes a role the customer controls and can revoke.',
+                'Fills forms but never submits them. The submit click is where the liability sits, so a person makes it.',
+                'Fills PDF packets with PDFBox AcroForms using versioned field-mapping templates. When a payer changes a form, I update a template instead of redeploying.',
+                'Uses cross-account IAM instead of stored credentials. The service assumes a role the customer controls and can revoke at any time.',
             ],
             tech: ['Java', 'Spring Boot', 'Playwright', 'PDFBox', 'AWS IAM'],
-            links: {},
+            links: {
+                source: 'https://credcloud.app'
+            },
         },
         // {
         //     slug: 'photo-cold-storage',

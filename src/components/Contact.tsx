@@ -24,7 +24,7 @@ export function Contact({ content }: ContactProps) {
                         Let's talk
                     </h2>
                     <p className="contact-lead">
-                        {availability}. The fastest way to reach me is email — I reply to everything.
+                        {availability}. Email is the fastest way to reach me.
                     </p>
 
                     <a className="btn btn-primary contact-email" href={`mailto:${email}`}>
