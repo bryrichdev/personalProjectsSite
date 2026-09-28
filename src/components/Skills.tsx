@@ -12,7 +12,7 @@ export function Skills({ groups }: SkillsProps) {
             id="skills"
             eyebrow="Toolkit"
             title="What I work with"
-            lead="The tools I reach for by default. I pick up new ones quickly when a problem calls for it."
+            lead="The tools I use most, plus my certifications."
         >
             <div className="skill-grid">
                 {groups.map((group) => (
