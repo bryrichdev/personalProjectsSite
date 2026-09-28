@@ -58,7 +58,7 @@ export const content: SiteContent = {
             items: ['AWS Cloud Practitioner', 'CompTIA Project+', 'ITIL Foundations', 'AWS SAA-C03 (in progress)']
         },
     ],
-    
+
     experience: [
         {
             role: 'Project Manager',
