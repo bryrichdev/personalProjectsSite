@@ -102,27 +102,27 @@ export const content: SiteContent = {
             tech: ['Google Apps Script', 'JavaScript'],
             links: {},
         },
-        {
-            slug: 'landon-hotel',
-            name: 'Landon Hotel Booking',
-            tagline: 'Internationalized booking app — Spring Boot API, Angular front end.',
-            description:
-                'A booking system for a hotel chain operating across time zones. The CRUD was not the ' +
-                'interesting part; making one deployment serve users in multiple locales was, with rates ' +
-                'and availability rendered in the viewer\u2019s time zone instead of the server\u2019s.',
-            role: 'Solo build',
-            period: '2025',
-            status: 'Archived',
-            highlights: [
-                'Locale handling runs off i18n resource bundles, so adding a language is a properties file rather than a code change.',
-                'Timestamps stored in UTC and converted at the edge, which removed an entire class of off-by-one-day booking bugs.',
-                'Packaged with a multi-stage Docker build so the runtime image carries the JAR and nothing else.',
-            ],
-            tech: ['Java', 'Spring Boot', 'Angular', 'TypeScript', 'Docker'],
-            links: {
-                // source: 'https://github.com/bryrichdev/landon-hotel',
-            },
-        },
+        // {
+        //     slug: 'landon-hotel',
+        //     name: 'Landon Hotel Booking',
+        //     tagline: 'Internationalized booking app — Spring Boot API, Angular front end.',
+        //     description:
+        //         'A booking system for a hotel chain operating across time zones. The CRUD was not the ' +
+        //         'interesting part; making one deployment serve users in multiple locales was, with rates ' +
+        //         'and availability rendered in the viewer\u2019s time zone instead of the server\u2019s.',
+        //     role: 'Solo build',
+        //     period: '2025',
+        //     status: 'Archived',
+        //     highlights: [
+        //         'Locale handling runs off i18n resource bundles, so adding a language is a properties file rather than a code change.',
+        //         'Timestamps stored in UTC and converted at the edge, which removed an entire class of off-by-one-day booking bugs.',
+        //         'Packaged with a multi-stage Docker build so the runtime image carries the JAR and nothing else.',
+        //     ],
+        //     tech: ['Java', 'Spring Boot', 'Angular', 'TypeScript', 'Docker'],
+        //     links: {
+        //         // source: 'https://github.com/bryrichdev/landon-hotel',
+        //     },
+        // },
         {
             slug: 'credentialing-automation',
             name: 'Credentialing Automation',
@@ -136,6 +136,7 @@ export const content: SiteContent = {
             role: 'Solo build',
             period: '2026',
             status: 'Prototype',
+            featured: true,
             highlights: [
                 'Fill but do not submit, by design. Automating the submit click is where the liability lives, so the tool does not do it.',
                 'PDF packets filled through PDFBox AcroForms against versioned field-mapping templates — a payer changing their form is a template revision, not a redeploy.',
@@ -144,48 +145,48 @@ export const content: SiteContent = {
             tech: ['Java', 'Spring Boot', 'Playwright', 'PDFBox', 'AWS IAM'],
             links: {},
         },
-        {
-            slug: 'photo-cold-storage',
-            name: 'Cold Storage for Photos',
-            tagline: 'Moves video out of iCloud into tiered S3 archive storage.',
-            description:
-                'Prime Photos covers stills at full resolution but caps video at 5 GB, which is exactly ' +
-                'where a large library gets expensive. This iOS app offloads originals through PhotoKit ' +
-                'into S3 — Glacier Instant Retrieval for anything you might browse, Deep Archive for the ' +
-                'rest — while keeping thumbnails and web-res derivatives in Standard so the library stays ' +
-                'browsable without paying retrieval costs.',
-            role: 'Solo build',
-            period: '2026',
-            status: 'In progress',
-            highlights: [
-                'Nothing is deleted locally until a checksum against the uploaded object verifies. No exceptions and no fast path.',
-                'Restores orchestrated through RestoreObject with SNS and Lambda handling completion, so a multi-hour Deep Archive retrieval does not require the app to stay open.',
-                'Bring-your-own-AWS-account through a cross-account role. I would rather not be the custodian of anyone\u2019s family photos.',
-            ],
-            tech: ['Swift', 'PhotoKit', 'AWS S3', 'Lambda', 'SNS'],
-            links: {},
-        },
-        {
-            slug: 'portfolio-infra',
-            name: 'This Site',
-            tagline: 'A React portfolio and the Terraform that puts it on AWS.',
-            description:
-                'React and TypeScript on Vite, with every piece of copy in one typed content file so ' +
-                'updating the site is editing data rather than JSX. Infrastructure is Terraform: a single ' +
-                'reusable S3 module applied across dev, staging, and prod from one monorepo, with ' +
-                'CloudFront in front of it.',
-            role: 'Solo build',
-            period: '2026',
-            status: 'In progress',
-            highlights: [
-                'Content, types, and presentation kept separate — adding a project is one typed object, and the compiler catches anything missing.',
-                'One S3 module applied per environment rather than three configurations that drift apart.',
-            ],
-            tech: ['React', 'TypeScript', 'Vite', 'Terraform', 'AWS S3', 'CloudFront'],
-            links: {
-                source: 'https://github.com/bryrichdev/personalProjectsSite',
-            },
-        },
+        // {
+        //     slug: 'photo-cold-storage',
+        //     name: 'Cold Storage for Photos',
+        //     tagline: 'Moves video out of iCloud into tiered S3 archive storage.',
+        //     description:
+        //         'Prime Photos covers stills at full resolution but caps video at 5 GB, which is exactly ' +
+        //         'where a large library gets expensive. This iOS app offloads originals through PhotoKit ' +
+        //         'into S3 — Glacier Instant Retrieval for anything you might browse, Deep Archive for the ' +
+        //         'rest — while keeping thumbnails and web-res derivatives in Standard so the library stays ' +
+        //         'browsable without paying retrieval costs.',
+        //     role: 'Solo build',
+        //     period: '2026',
+        //     status: 'In progress',
+        //     highlights: [
+        //         'Nothing is deleted locally until a checksum against the uploaded object verifies. No exceptions and no fast path.',
+        //         'Restores orchestrated through RestoreObject with SNS and Lambda handling completion, so a multi-hour Deep Archive retrieval does not require the app to stay open.',
+        //         'Bring-your-own-AWS-account through a cross-account role. I would rather not be the custodian of anyone\u2019s family photos.',
+        //     ],
+        //     tech: ['Swift', 'PhotoKit', 'AWS S3', 'Lambda', 'SNS'],
+        //     links: {},
+        // },
+        // {
+        //     slug: 'portfolio-infra',
+        //     name: 'This Site',
+        //     tagline: 'A React portfolio and the Terraform that puts it on AWS.',
+        //     description:
+        //         'React and TypeScript on Vite, with every piece of copy in one typed content file so ' +
+        //         'updating the site is editing data rather than JSX. Infrastructure is Terraform: a single ' +
+        //         'reusable S3 module applied across dev, staging, and prod from one monorepo, with ' +
+        //         'CloudFront in front of it.',
+        //     role: 'Solo build',
+        //     period: '2026',
+        //     status: 'In progress',
+        //     highlights: [
+        //         'Content, types, and presentation kept separate — adding a project is one typed object, and the compiler catches anything missing.',
+        //         'One S3 module applied per environment rather than three configurations that drift apart.',
+        //     ],
+        //     tech: ['React', 'TypeScript', 'Vite', 'Terraform', 'AWS S3', 'CloudFront'],
+        //     links: {
+        //         source: 'https://github.com/bryrichdev/personalProjectsSite',
+        //     },
+        // },
     ],
 
     experience: [
