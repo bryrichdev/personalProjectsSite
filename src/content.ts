@@ -58,6 +58,25 @@ export const content: SiteContent = {
             items: ['AWS Cloud Practitioner', 'CompTIA Project+', 'ITIL Foundations', 'AWS SAA-C03 (in progress)']
         },
     ],
+    
+    experience: [
+        {
+            role: 'Project Manager',
+            org: 'Conservice',
+            period: 'March 2023 — Present',
+            location: 'Remote',
+            summary:
+                'Own the automation treasury operations runs on — Apps Script services across ' +
+                'Google Workspace, ' +
+                'supporting a team of 30+.',
+            points: [
+                'Automated the daily bank reconciliation the team had been doing by hand, cutting roughly 25 hours a week of manual entry and taking keying errors from about 2% of records to effectively zero.',
+                'Built and maintain the Apps Script services treasury depends on daily — matching, reporting, and exception handling across about 120,000 payment records and $80M in monthly volume.',
+                'Created data pipeline, processing and transforming 30,000+ lines of transactional data daily, to feed into new reconciliation software.',
+            ],
+            tech: ['Google Apps Script', 'JavaScript', 'SQL', 'VBA', 'Power BI'],
+        },
+    ],
 
     projects: [
         {
@@ -189,22 +208,5 @@ export const content: SiteContent = {
         // },
     ],
 
-    experience: [
-        {
-            role: 'Project Manager',
-            org: 'Conservice',
-            period: 'March 2023 — Present',
-            location: 'Remote',
-            summary:
-                'Own the automation treasury operations runs on — Apps Script services across ' +
-                'Google Workspace, ' +
-                'supporting a team of 30+.',
-            points: [
-                'Automated the daily bank reconciliation the team had been doing by hand, cutting roughly 25 hours a week of manual entry and taking keying errors from about 2% of records to effectively zero.',
-                'Built and maintain the Apps Script services treasury depends on daily — matching, reporting, and exception handling across about 120,000 payment records and $80M in monthly volume.',
-                'Created data pipeline, processing and transforming 30,000+ lines of transactional data daily, to feed into new reconciliation software.',
-            ],
-            tech: ['Google Apps Script', 'JavaScript', 'SQL', 'VBA', 'Power BI'],
-        },
-    ],
+    
 }
