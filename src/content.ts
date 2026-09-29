@@ -1,14 +1,6 @@
-import type {SiteContent} from './types.ts'
+import type { SiteContent } from './types.ts'
 
-/**
- * ─────────────────────────────────────────────────────────────────────────────
- *  EDIT THIS FILE — it is the only place site copy lives.
- *
- *  Anything still marked TODO needs a real value from you. Links are commented
- *  out rather than filled with guesses, so nothing renders as a dead link.
- *  Uncomment each one once the URL is confirmed.
- * ─────────────────────────────────────────────────────────────────────────────
- */
+
 export const content: SiteContent = {
     name: 'Bryson Richards',
     role: 'Software Engineer',
@@ -19,16 +11,16 @@ export const content: SiteContent = {
         'run on Java and Spring Boot over Postgres, and I manage AWS infrastructure with Terraform. ' +
         'I want a backend or platform role where I own services end to end.',
     stats: [
-        {value: '3+', label: 'Years in production'},
-        {value: 'Java / Spring Boot', label: 'Primary stack'},
-        {value: 'B.S. Software Engineering', label: 'Degree'},
+        { value: '3+', label: 'Years in production' },
+        { value: 'Java / Spring Boot', label: 'Primary stack' },
+        { value: 'B.S. Software Engineering', label: 'Degree' },
     ],
     email: 'bryrich.dev@gmail.com',
-    resumeUrl: '', // drop resume.pdf in public/ and set this to '/resume.pdf'
+    resumeUrl: '/resume.pdf',
     availability: 'Open to full-time roles',
     socials: [
-        {label: 'GitHub', href: 'https://github.com/bryrichdev', icon: 'github'},
-        {label: 'LinkedIn', href: 'https://www.linkedin.com/in/bryson-richards-a78812316', icon: 'linkedin'},
+        { label: 'GitHub', href: 'https://github.com/bryrichdev', icon: 'github' },
+        { label: 'LinkedIn', href: 'https://www.linkedin.com/in/bryson-richards-a78812316', icon: 'linkedin' },
     ],
 
     about: [
@@ -41,17 +33,14 @@ export const content: SiteContent = {
         'Spring Boot on the backend and React and Angular on the front end. I know enough AWS to ' +
         "build my own infrastructure instead of filing a ticket for it. My capstone, PantryPlan, " +
         "is the project I'd most like to walk you through.",
-
-        "I'm looking for a backend or infrastructure role on a team that ships. If that's your " +
-        'team, send me an email.',
     ],
 
     skills: [
-        {label: 'Languages', items: ['Java', 'TypeScript', 'JavaScript', 'Python', 'SQL', 'VBA']},
-        {label: 'Backend', items: ['Spring Boot', 'JPA / Hibernate', 'REST APIs', 'PostgreSQL', 'MySQL', 'Flask']},
-        {label: 'Frontend', items: ['React', 'Angular', 'Vite', 'HTML', 'CSS']},
-        {label: 'Cloud & infrastructure', items: ['AWS', 'Terraform', 'Docker', 'S3', 'Lambda', 'IAM', 'RDS']},
-        {label: 'Tooling & testing', items: ['Git', 'GitHub Actions', 'JUnit', 'pytest', 'Playwright', 'IntelliJ']},
+        { label: 'Languages', items: ['Java', 'TypeScript', 'JavaScript', 'Python', 'SQL', 'VBA'] },
+        { label: 'Backend', items: ['Spring Boot', 'JPA / Hibernate', 'REST APIs', 'PostgreSQL', 'MySQL', 'Flask'] },
+        { label: 'Frontend', items: ['React', 'Angular', 'Vite', 'HTML', 'CSS'] },
+        { label: 'Cloud & infrastructure', items: ['AWS', 'Terraform', 'Docker', 'S3', 'Lambda', 'IAM', 'RDS'] },
+        { label: 'Tooling & testing', items: ['Git', 'GitHub Actions', 'JUnit', 'pytest', 'Playwright', 'IntelliJ'] },
         {
             label: 'Certifications',
             items: ['AWS Cloud Practitioner', 'CompTIA Project+', 'ITIL Foundation', 'AWS SAA-C03 (in progress)']
@@ -92,89 +81,73 @@ export const content: SiteContent = {
 
     projects: [
         {
-            slug: 'pantryplan',
-            name: 'PantryPlan',
-            tagline: 'Turns your recipes and pantry stock into a grocery list.',
+            slug: 'pantryprep',
+            name: 'PantryPrep',
+            tagline: 'Plans the week around what is already in your pantry.',
             description:
-                'A full-stack meal planner built on Spring Boot and PostgreSQL. You add recipes and ' +
-                "track what's in your pantry. PantryPlan subtracts what you have from what the week's " +
-                "meals need and returns what you still have to buy. It's my WGU capstone and the first " +
-                'project where I owned the schema, the service layer, and the deployment.',
+                'A live meal-planning app that keeps recipes, pantry stock, weekly plans, and grocery ' +
+                'lists in sync. PantryPrep totals what every meal needs, scales it for the planned ' +
+                'servings, subtracts compatible stock, and sorts what is left by aisle. It began as ' +
+                'my WGU capstone and now runs as a production service on AWS.',
             role: 'Solo build',
             period: '2026',
-            status: 'In progress',
+            status: 'Live',
             featured: true,
             highlights: [
-                'One request builds the grocery list. It takes the set difference between planned recipes and current stock, replacing the manual cross-checking the app was built to remove.',
-                'Reports share one interface. PantryStockReport and RecipeUsageReport both implement it, so a new report type is a new class instead of another branch in a switch.',
-                'Deployed on Render. I priced App Runner with RDS and ECS Fargate with Aurora Serverless first. Neither was worth the operational overhead at this scale.',
+                'Builds one grocery list from the whole week before subtracting pantry stock, so the same bag of flour is never counted against two meals. Quantities are converted across compatible kitchen units.',
+                'Keeps the workflow connected: cooking a planned meal deducts its ingredients, undo restores the exact pantry rows, and bought groceries can be put away directly from the list.',
+                'Terraform provisions a Graviton EC2 host running the app, PostgreSQL, and Caddy in Docker Compose. GitHub Actions deploys scanned ECR images through SSM and rolls back a failed release.',
             ],
-            tech: ['Java', 'Spring Boot', 'PostgreSQL', 'JPA', 'REST', 'Render'],
+            tech: ['Java', 'Spring Boot', 'PostgreSQL', 'JPA', 'Docker', 'Terraform', 'AWS EC2', 'GitHub Actions'],
             links: {
-                // demo: 'https://pantryplan.onrender.com',
-                // source: 'https://github.com/bryrichdev/pantryplan',
+                demo: 'https://pantryprep.app/',
+                source: 'https://github.com/bryrichdev/pantryPlan',
+            },
+        },
+        {
+            slug: 'credentialing-automation',
+            name: 'CredCloud',
+            tagline: 'Turns provider records into reviewed PDFs and guided payer-portal applications.',
+            description:
+                'A live, multi-tenant credentialing workspace for providers, groups, licenses, documents, ' +
+                'and payer enrollments. CredCloud reuses that record to generate fillable PDF applications ' +
+                'and guide portal entry in an isolated browser. It fills the repetitive fields, then leaves ' +
+                'review and submission with the credentialing coordinator.',
+            role: 'Solo build',
+            period: '2026',
+            status: 'Live',
+            featured: true,
+            highlights: [
+                'Maps provider data into versioned payer templates, creates a reviewable draft, and generates the completed AcroForm only after a coordinator checks every answer.',
+                'Learns portal forms visually and replays the mapping in CredCloud\u2019s temporary browser or a Chrome extension. It fills text, selects options, and never clicks Submit.',
+                'Runs on AWS behind a Cloudflare Tunnel with required two-step sign-in for admins, encrypted backup-and-restore drills, and a versioned S3 bucket isolated per workspace.',
+            ],
+            tech: ['Java', 'Spring Boot', 'PostgreSQL', 'Playwright', 'PDFBox', 'Docker', 'Terraform', 'AWS S3'],
+            links: {
+                demo: 'https://credcloud.app/',
+                source: 'https://github.com/bryrichdev/credapp'
             },
         },
         {
             slug: 'treasury-automation',
             name: 'Treasury Automation Suite',
-            tagline: 'The Apps Script services a national utility billing company\u2019s treasury team runs every morning.',
+            tagline: 'Production automation for 120,000 payment records and $80M in monthly volume.',
             description:
-                'Three years of production automation in Google Workspace at Conservice. I build and ' +
-                'maintain the services the treasury team uses every day for reconciliation, reporting, ' +
-                "and the handoffs between them. It's internal, so there's no public repo. It's also the " +
-                'code of mine that has run in production the longest.',
+                'A suite of Google Workspace services I have built and operated at Conservice since 2023. ' +
+                'It reconciles bank activity, surfaces exceptions, produces operational reporting, and ' +
+                'moves transaction data into the company\u2019s reconciliation system. The software is ' +
+                'internal, but it is the code of mine with the longest production track record.',
             role: 'Solo build, internal',
             period: '2023 – Present',
             status: 'Live',
             featured: true,
-            highlights: [],
-            tech: ['Google Apps Script', 'JavaScript'],
-            links: {},
-        },
-        // {
-        //     slug: 'landon-hotel',
-        //     name: 'Landon Hotel Booking',
-        //     tagline: 'Internationalized booking app — Spring Boot API, Angular front end.',
-        //     description:
-        //         'A booking system for a hotel chain operating across time zones. The CRUD was not the ' +
-        //         'interesting part; making one deployment serve users in multiple locales was, with rates ' +
-        //         'and availability rendered in the viewer\u2019s time zone instead of the server\u2019s.',
-        //     role: 'Solo build',
-        //     period: '2025',
-        //     status: 'Archived',
-        //     highlights: [
-        //         'Locale handling runs off i18n resource bundles, so adding a language is a properties file rather than a code change.',
-        //         'Timestamps stored in UTC and converted at the edge, which removed an entire class of off-by-one-day booking bugs.',
-        //         'Packaged with a multi-stage Docker build so the runtime image carries the JAR and nothing else.',
-        //     ],
-        //     tech: ['Java', 'Spring Boot', 'Angular', 'TypeScript', 'Docker'],
-        //     links: {
-        //         // source: 'https://github.com/bryrichdev/landon-hotel',
-        //     },
-        // },
-        {
-            slug: 'credentialing-automation',
-            name: 'Credentialing Automation',
-            tagline: 'Fills out medical credentialing applications without storing anyone\u2019s credentials.',
-            description:
-                'Credentialing coordinators retype the same provider data into dozens of payer portals. ' +
-                'This Spring Boot service drives Playwright to fill those forms, then stops. A person ' +
-                'reviews and submits every one. Provider data stays in the customer\u2019s own AWS account ' +
-                'and is reached through a cross-account role, so the service never stores credentials.',
-            role: 'Solo build',
-            period: '2026',
-            status: 'Prototype',
-            featured: true,
             highlights: [
-                'Fills forms but never submits them. The submit click is where the liability sits, so a person makes it.',
-                'Fills PDF packets with PDFBox AcroForms using versioned field-mapping templates. When a payer changes a form, I update a template instead of redeploying.',
-                'Uses cross-account IAM instead of stored credentials. The service assumes a role the customer controls and can revoke at any time.',
+                'Replaced a manual daily reconciliation process, saving about 25 hours each week and reducing keying errors from roughly 2% of records to near zero.',
+                'Supports a treasury team of 30+ across matching, reporting, and exception handling for about 120,000 payment records each month.',
+                'Processes and transforms more than 30,000 lines of transaction data each day for the company\u2019s reconciliation platform.',
             ],
-            tech: ['Java', 'Spring Boot', 'Playwright', 'PDFBox', 'AWS IAM'],
-            links: {
-                source: 'https://credcloud.app'
-            },
+            tech: ['Google Apps Script', 'JavaScript', 'SQL', 'VBA', 'Power BI'],
+            links: {},
         },
         // {
         //     slug: 'photo-cold-storage',
@@ -197,28 +170,7 @@ export const content: SiteContent = {
         //     tech: ['Swift', 'PhotoKit', 'AWS S3', 'Lambda', 'SNS'],
         //     links: {},
         // },
-        // {
-        //     slug: 'portfolio-infra',
-        //     name: 'This Site',
-        //     tagline: 'A React portfolio and the Terraform that puts it on AWS.',
-        //     description:
-        //         'React and TypeScript on Vite, with every piece of copy in one typed content file so ' +
-        //         'updating the site is editing data rather than JSX. Infrastructure is Terraform: a single ' +
-        //         'reusable S3 module applied across dev, staging, and prod from one monorepo, with ' +
-        //         'CloudFront in front of it.',
-        //     role: 'Solo build',
-        //     period: '2026',
-        //     status: 'In progress',
-        //     highlights: [
-        //         'Content, types, and presentation kept separate — adding a project is one typed object, and the compiler catches anything missing.',
-        //         'One S3 module applied per environment rather than three configurations that drift apart.',
-        //     ],
-        //     tech: ['React', 'TypeScript', 'Vite', 'Terraform', 'AWS S3', 'CloudFront'],
-        //     links: {
-        //         source: 'https://github.com/bryrichdev/personalProjectsSite',
-        //     },
-        // },
     ],
 
-    
+
 }
