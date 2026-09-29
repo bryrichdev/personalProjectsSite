@@ -20,7 +20,7 @@ export const content: SiteContent = {
     availability: 'Open to full-time roles',
     socials: [
         { label: 'GitHub', href: 'https://github.com/bryrichdev', icon: 'github' },
-        { label: 'LinkedIn', href: 'https://www.linkedin.com/in/bryson-richards-a78812316', icon: 'linkedin' },
+        { label: 'LinkedIn', href: 'https://www.linkedin.com/in/bryrichdev', icon: 'linkedin' },
     ],
 
     about: [
